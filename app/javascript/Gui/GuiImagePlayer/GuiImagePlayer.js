@@ -45,7 +45,7 @@ GuiImagePlayer.start = function(ItemData,selectedItem,isPhotoCollection) {
 	if (isPhotoCollection) {
 		url = Server.getChildItemsURL(ItemData.Items[selectedItem].Id,"&Recursive=true&SortBy=Random&SortOrder=Ascending&IncludeItemTypes=Photo&fields=SortName,Overview&Limit=2500");	
 	} else {
-		url = Server.getChildItemsURL(ItemData.Items[selectedItem].ParentId,"&SortBy=SortName&SortOrder=Ascending&IncludeItemTypes=Photo&fields=SortName,Overview&Limit=2500");	
+		url = Server.getChildItemsURL(ItemData.Items[selectedItem].Id,"&SortBy=SortName&SortOrder=Ascending&IncludeItemTypes=Photo&fields=SortName,Overview&Limit=2500");	
 	}
 	
 	var result = Server.getContent(url);
